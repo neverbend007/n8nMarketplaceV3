@@ -2,10 +2,10 @@
 export const dynamic = "force-dynamic";
 
 import React from 'react'
-import { useAuth } from '@/contexts/AuthContext'
+import { AuthProvider, useAuth } from '@/contexts/AuthContext'
 import { useRouter } from 'next/navigation'
 
-export default function LoginPage() {
+const LoginContent = () => {
   const { user, signInWithGithub, signInWithGoogle } = useAuth()
   const router = useRouter()
 
@@ -45,5 +45,13 @@ export default function LoginPage() {
         </div>
       </div>
     </div>
+  )
+}
+
+export default function LoginPage() {
+  return (
+    <AuthProvider>
+      <LoginContent />
+    </AuthProvider>
   )
 } 
