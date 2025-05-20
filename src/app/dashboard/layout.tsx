@@ -1,8 +1,6 @@
 'use client'
 
 import React from 'react'
-import { useAuth } from '@/contexts/AuthContext'
-import { useRouter } from 'next/navigation'
 import Link from 'next/link'
 
 export default function DashboardLayout({
@@ -10,17 +8,6 @@ export default function DashboardLayout({
 }: {
   children: React.ReactNode
 }) {
-  const { user, signOut } = useAuth()
-  const router = useRouter()
-
-  React.useEffect(() => {
-    if (!user) {
-      router.push('/login')
-    }
-  }, [user, router])
-
-  if (!user) return null
-
   return (
     <div className="min-h-screen bg-black">
       {/* Dashboard Navigation */}
@@ -33,7 +20,6 @@ export default function DashboardLayout({
                   <span className="text-lg font-bold text-white">N8N</span>
                 </div>
               </Link>
-              
               <div className="hidden md:flex space-x-4">
                 <Link href="/dashboard" className="nav-link">
                   Overview
@@ -46,20 +32,9 @@ export default function DashboardLayout({
                 </Link>
               </div>
             </div>
-
-            <div className="flex items-center space-x-4">
-              <span className="text-purple-200">{user.email}</span>
-              <button
-                onClick={() => signOut()}
-                className="btn-secondary text-sm"
-              >
-                Sign Out
-              </button>
-            </div>
           </div>
         </div>
       </nav>
-
       {/* Main Content */}
       <main className="pt-20 px-4">
         <div className="max-w-7xl mx-auto">
