@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --purple-primary: #6D28D9;
+  --purple-primary-20: rgba(109, 40, 217, 0.2);
+  --purple-primary-40: rgba(109, 40, 217, 0.4);
+  --purple-secondary: #7C3AED;
+  --purple-light: #8B5CF6;
+  --purple-dark: #5B21B6;
+  --black: #000000;
+  --white: #FFFFFF;
+}
+
+@layer base {
+  body {
+    @apply bg-black text-white;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-gradient-to-r from-purple-primary to-purple-600 hover:from-purple-600 hover:to-purple-primary text-white px-4 py-2 rounded-lg transition-all duration-200 transform hover:scale-105;
+  }
+  
+  .btn-secondary {
+    @apply border-2 border-purple-primary text-purple-200 hover:bg-purple-primary hover:text-white px-4 py-2 rounded-lg transition-all duration-200 transform hover:scale-105;
+  }
+
+  .nav-link {
+    @apply text-gray-400 hover:text-purple-200 transition-colors duration-200;
+  }
+
+  .card {
+    @apply bg-black/40 rounded-xl p-6 border border-[var(--purple-primary-20)] hover:border-[var(--purple-primary-40)] transition-all duration-200 backdrop-blur-sm;
+  }
+
+  .input {
+    @apply bg-black/80 border border-[var(--purple-primary-20)] rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-purple-primary focus:border-transparent;
+  }
+} 
