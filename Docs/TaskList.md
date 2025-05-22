@@ -53,9 +53,9 @@ This checklist focuses on delivering a lean, production-ready MVP that relies ex
 ---
 
 ## 3. Public Pages
-- [ ] `/` Home — hero, category chips, featured items
-- [ ] `/marketplace` — item grid, search, filter, pagination
-- [ ] `/item/[id]` — item details, purchase CTA
+- [x] `/` Home — hero, category chips, featured items
+- [x] `/marketplace` — item grid, search, filter, pagination
+- [x] `/item/[id]` — item details, purchase CTA
 
 ---
 

@@ -2,7 +2,9 @@ import React from 'react'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
+import { SupabaseProvider } from '@/contexts/SupabaseContext'
 import { AuthProvider } from '@/contexts/AuthContext'
+import ClientProvider from '@/components/ClientProvider'
 import Layout from '@/components/Layout'
 
 const inter = Inter({ subsets: ['latin'] })
@@ -20,11 +22,15 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark">
       <body className={`${inter.className} bg-black text-white min-h-screen`}>
-        <AuthProvider>
-          <Layout>
-            {children}
-          </Layout>
-        </AuthProvider>
+        <SupabaseProvider>
+          <AuthProvider>
+            <ClientProvider>
+              <Layout>
+                {children}
+              </Layout>
+            </ClientProvider>
+          </AuthProvider>
+        </SupabaseProvider>
       </body>
     </html>
   )
