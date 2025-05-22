@@ -14,33 +14,33 @@ This checklist focuses on delivering a lean, production-ready MVP that relies ex
 
 ## 1. Supabase Backbone
 ### 1.1 Authentication
-- [ ] Enable Google provider (MVP)
-- [ ] (Optional) Enable GitHub provider
-- [ ] Configure redirect URLs (local + prod)
-- [ ] Implement email domain restrictions (if required)
+- [x] Enable Google provider (MVP)
+- [x] (Optional) Enable GitHub provider
+- [x] Configure redirect URLs (local + prod)
+- [x] Implement email domain restrictions (if required)
 
 ### 1.2 Database Schema (SQL)
-- [ ] `users` (extends `auth.users` with role & profile)
-- [ ] `categories`
-- [ ] `items`
-- [ ] `orders`
-- [ ] Create SQL migration file & run via Supabase CLI
+- [x] `users` (extends `auth.users` with role & profile)
+- [x] `categories`
+- [x] `items`
+- [x] `orders`
+- [x] Create SQL migration file & run via Supabase CLI
 
 ### 1.3 Row-Level Security
-- [ ] Enable RLS on all tables
-- [ ] Policies for read/write per role
+- [x] Enable RLS on all tables
+- [x] Policies for read/write per role
 
 ### 1.4 Storage
-- [ ] Create `avatars` bucket (public)
-- [ ] Create `item-images` bucket (public)
+- [x] Create `avatars` bucket (public)
+- [x] Create `item-images` bucket (public)
 
 ### 1.5 Edge Functions
-- [ ] `checkout.ts` — validate purchase, insert `orders` row
-- [ ] `admin-metrics.ts` — aggregate basic stats for dashboards
+- [x] `checkout.ts` — validate purchase, insert `orders` row
+- [x] `admin-metrics.ts` — aggregate basic stats for dashboards
 
 ### 1.6 Realtime Channels
-- [ ] Enable realtime on `items` (availability)
-- [ ] Enable realtime on `orders` (user order status)
+- [x] Enable realtime on `items` (availability)
+- [x] Enable realtime on `orders` (user order status)
 
 ---
 
