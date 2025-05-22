@@ -31,6 +31,11 @@ export const useMarketplaceItems = (filters: MarketplaceFilters = {}) => {
   ])
 
   const fetchItems = useCallback(async () => {
+    // Don't fetch if supabase client is not available (build time)
+    if (!supabase) {
+      return
+    }
+
     try {
       setLoading(true)
       setError(null)

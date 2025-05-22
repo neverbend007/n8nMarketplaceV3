@@ -15,6 +15,11 @@ export const useItemDetail = (itemId: string) => {
     const fetchItem = async () => {
       if (!itemId) return
       
+      // Don't fetch if supabase client is not available (build time)
+      if (!supabase) {
+        return
+      }
+      
       try {
         setLoading(true)
         setError(null)
