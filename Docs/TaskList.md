@@ -45,10 +45,10 @@ This checklist focuses on delivering a lean, production-ready MVP that relies ex
 ---
 
 ## 2. Frontend Foundation
-- [ ] Integrate `@supabase/auth-helpers-nextjs`
-- [ ] Create `SupabaseProvider` context
-- [ ] Global layout with `Header`, `Footer`
-- [ ] Theme & component library (`shadcn/ui` + Tailwind)
+- [x] Integrate `@supabase/auth-helpers-nextjs`
+- [x] Create `SupabaseProvider` context
+- [x] Global layout with `Header`, `Footer`
+- [x] Theme & component library (`shadcn/ui` + Tailwind)
 
 ---
 
