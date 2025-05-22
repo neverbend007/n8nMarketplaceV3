@@ -1,5 +1,8 @@
 'use client'
 
+// Force dynamic rendering since we use Supabase
+export const dynamic = 'force-dynamic'
+
 import React, { useState, useEffect, useMemo } from 'react'
 import { useSearchParams, useRouter } from 'next/navigation'
 import Header from '@/components/Header'

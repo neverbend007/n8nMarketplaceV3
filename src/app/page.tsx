@@ -4,6 +4,9 @@ import Link from 'next/link'
 import CategoryChips from '@/components/CategoryChips'
 import FeaturedItems from '@/components/FeaturedItems'
 
+// Force dynamic rendering since we use Supabase
+export const dynamic = 'force-dynamic'
+
 export default function HomePage() {
   return (
     <main className="min-h-screen bg-black">
