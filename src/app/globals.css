@@ -36,7 +36,5 @@
     @apply bg-black/40 rounded-xl p-6 border border-[var(--purple-primary-20)] hover:border-[var(--purple-primary-40)] transition-all duration-200 backdrop-blur-sm;
   }
 
-  .input {
-    @apply bg-black/80 border border-[var(--purple-primary-20)] rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-purple-primary focus:border-transparent;
-  }
+  .input {    @apply bg-black/80 border border-[var(--purple-primary-20)] rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-purple-primary focus:border-transparent;  }  .line-clamp-2 {    overflow: hidden;    display: -webkit-box;    -webkit-box-orient: vertical;    -webkit-line-clamp: 2;  }  .line-clamp-3 {    overflow: hidden;    display: -webkit-box;    -webkit-box-orient: vertical;    -webkit-line-clamp: 3;  }  .scrollbar-hide {    -ms-overflow-style: none;    scrollbar-width: none;  }  .scrollbar-hide::-webkit-scrollbar {    display: none;  }
 } 

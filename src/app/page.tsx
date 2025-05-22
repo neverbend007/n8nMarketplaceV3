@@ -1,30 +1,49 @@
 import React from 'react'
 import Header from '@/components/Header'
 import Link from 'next/link'
+import CategoryChips from '@/components/CategoryChips'
+import FeaturedItems from '@/components/FeaturedItems'
 
-export default function Home() {
+export default function HomePage() {
   return (
     <main className="min-h-screen bg-black">
       <Header />
       
       {/* Hero Section */}
-      <section className="pt-32 pb-16 px-4 bg-gradient-to-b from-black via-black to-purple-900/10">
+      <section className="py-20 px-4 bg-gradient-to-b from-black via-purple-900/20 to-black">
         <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-purple-400 via-purple-primary to-purple-600 text-transparent bg-clip-text mb-6">
-            Welcome to N8N Marketplace
+          <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-purple-600 text-transparent bg-clip-text">
+            N8N Marketplace
           </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-            Your one-stop destination for automation workflows, tools, and integrations.
-            Discover, share, and monetize your automation solutions.
+          <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Discover powerful automation workflows, tools, and integrations 
+            created by our community of experts.
           </p>
-          <div className="flex flex-col sm:flex-row justify-center gap-4">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/marketplace" className="btn-primary text-lg px-8 py-3">
-              Explore Marketplace
+              Browse Marketplace
             </Link>
             <Link href="/signup" className="btn-secondary text-lg px-8 py-3">
               Start Creating
             </Link>
           </div>
+        </div>
+      </section>
+
+      {/* Category Navigation */}
+      <section className="py-12 px-4">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-2xl md:text-3xl font-bold text-center mb-8 bg-gradient-to-r from-purple-400 to-purple-600 text-transparent bg-clip-text">
+            Browse by Category
+          </h2>
+          <CategoryChips showAsLinks={true} />
+        </div>
+      </section>
+
+      {/* Featured Items */}
+      <section className="py-12 px-4">
+        <div className="max-w-7xl mx-auto">
+          <FeaturedItems title="Featured Workflows" limit={8} />
         </div>
       </section>
 
