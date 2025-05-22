@@ -17,12 +17,6 @@ export const usePurchaseItem = () => {
       return null
     }
 
-    // Don't proceed if supabase client is not available (build time)
-    if (!supabase) {
-      setError('Service temporarily unavailable')
-      return null
-    }
-
     try {
       setLoading(true)
       setError(null)
@@ -64,11 +58,6 @@ export const usePurchaseItem = () => {
 
   const checkOwnership = async (itemId: string): Promise<boolean> => {
     if (!user) return false
-
-    // Don't proceed if supabase client is not available (build time)
-    if (!supabase) {
-      return false
-    }
 
     try {
       const { data, error } = await supabase

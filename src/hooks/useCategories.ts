@@ -12,11 +12,6 @@ export const useCategories = () => {
   const supabase = useSupabase()
 
   useEffect(() => {
-    // Don't fetch if supabase client is not available (build time)
-    if (!supabase) {
-      return
-    }
-
     const fetchCategories = async () => {
       try {
         setLoading(true)
