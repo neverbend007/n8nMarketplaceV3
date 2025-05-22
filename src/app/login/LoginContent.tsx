@@ -1,6 +1,6 @@
 'use client'
 import React from 'react'
-import { AuthProvider, useAuth } from '@/contexts/AuthContext'
+import { useAuth } from '@/contexts/AuthContext'
 import { useRouter } from 'next/navigation'
 
 const LoginContentInner = () => {
@@ -43,9 +43,5 @@ const LoginContentInner = () => {
 }
 
 export default function LoginContent() {
-  return (
-    <AuthProvider>
-      <LoginContentInner />
-    </AuthProvider>
-  )
+  return <LoginContentInner />
 } 

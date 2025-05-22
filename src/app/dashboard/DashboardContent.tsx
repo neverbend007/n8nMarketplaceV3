@@ -1,9 +1,11 @@
 'use client'
 import React from 'react'
-import { AuthProvider, useAuth } from '@/contexts/AuthContext'
+import { useAuth } from '@/contexts/AuthContext'
+import { useRole } from '@/hooks/useRole'
 import Link from 'next/link'
 
 const DashboardContentInner = () => {
+  useRole('user')
   const { user } = useAuth()
   return (
     <div className="space-y-8">
@@ -34,9 +36,5 @@ const DashboardContentInner = () => {
 }
 
 export default function DashboardContent() {
-  return (
-    <AuthProvider>
-      <DashboardContentInner />
-    </AuthProvider>
-  )
+  return <DashboardContentInner />
 } 
